@@ -23,7 +23,7 @@ ffmpeg-python
 
 #cd C:\Users\rg526\venv\py311\Scripts\
 #.\activate
-#pip install -r "C:\Users\rg526\OneDrive\Research\Working Paper\Thesis 2\ADER-S\src\ADERS_req.txt"
+#pip install -r "https://ruiguan.work/venv/ADERS_req.txt"
 
 # from AudioSegment
 # download FFmeg https://github.com/BtbN/FFmpeg-Builds/releases

@@ -18,6 +18,6 @@ py-irt
 stargazer
 
 #cd C:\Users\rg526\venv\py313\Scripts
-#activate
-#pip install -r "src\fair_req.txt"
+#.\activate
+#pip install -r "https://ruiguan.work/venv/FC_req.txt"
 # py -3.13 -m pip install py-irt

@@ -20,9 +20,7 @@ unidecode
 geopandas
 
 #cd C:\Users\rg526\venv\py313\Scripts
-#activate
-
-
-#pip install -r "C:\Users\rg526\OneDrive\Research\Working Paper\FairCoop\main\Fair\src\fair_req.txt"
+#.\activate
+#pip install -r "https://ruiguan.work/venv/BAA_req.txt"
 
 # py -3.13 -m pip install py-irt

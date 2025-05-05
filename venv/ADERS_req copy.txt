@@ -13,6 +13,5 @@ opencv-python>=4.5
 
 
 #cd C:\Users\rg526\venv\py311\Scripts\
-#activate
 #.\activate
 #pip install -r "C:\Users\rg526\OneDrive\Research\Working Paper\Thesis 2\ADER-S\src\ADERS_req.txt"
