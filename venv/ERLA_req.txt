@@ -1,0 +1,20 @@
+jupyter 
+ipykernel
+numpy
+pandas
+matplotlib
+seaborn
+scipy
+python-dateutil
+pulp
+glob2
+importlib-metadata
+python-dateutil
+openpyxl
+
+
+
+#cd C:\Users\rg526\venv\py313\Scripts
+#activate
+#pip install -r "src\fair_req.txt"
+# py -3.13 -m pip install py-irt
