@@ -19,6 +19,7 @@ pydub
 moviepy
 ffmpeg
 ffmpeg-python
+azure-cognitiveservices-speech
 
 
 #cd C:\Users\rg526\venv\py311\Scripts\
