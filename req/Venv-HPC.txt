@@ -1,0 +1,21 @@
+# Venv
+
+whereis python
+
+python3.9 -m venv ~/envs/erla  
+source ~/envs/erla/bin/activate
+pip install --upgrade pip
+pip install numpy pandas scipy statsmodels matplotlib seaborn openpyxl
+deactivate
+
+
+rm -rf ~/envs/py39_erla 
+
+
+# Conda
+conda deactivate
+source ~/envs/py39/bin/activate
+pip install scikit-learn
+python -m pip install scikit-learn
+python -m pip39 install scikit-learn
+python -m pip install scikit-learn --target /shared/home/rg526/envs/py39/lib/python3.9/site-packages
