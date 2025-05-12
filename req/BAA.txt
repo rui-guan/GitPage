@@ -24,3 +24,13 @@ geopandas
 #pip install -r "https://ruiguan.work/venv/BAA_req.txt"
 
 # py -3.13 -m pip install py-irt
+
+
+#whereis python
+
+#python3.11 -m venv ~/envs/BAA 
+#source ~/envs/BAA/bin/activate
+#pip install --upgrade pip
+#pip install -r "https://ruiguan.work/venv/BAA.txt"
+
+#deactivate
