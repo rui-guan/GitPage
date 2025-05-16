@@ -2,12 +2,14 @@
 
 whereis python
 
-python3.9 -m venv ~/envs/erla  
-source ~/envs/erla/bin/activate
+python3.9 -m venv ~/envs/BAAx  
+source ~/envs/BAAx/bin/activate
 pip install --upgrade pip
+pip install --r 
 pip install numpy pandas scipy statsmodels matplotlib seaborn openpyxl
 deactivate
 
+https://www.kent.ac.uk/hpc/docs/hpc/1/access.html
 
 rm -rf ~/envs/py39_erla 
 
