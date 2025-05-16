@@ -5,7 +5,7 @@ whereis python
 python3.9 -m venv ~/envs/BAAx  
 source ~/envs/BAAx/bin/activate
 pip install --upgrade pip
-pip install --r 
+pip install -r "https://ruiguan.work/req/BAA.txt"
 pip install numpy pandas scipy statsmodels matplotlib seaborn openpyxl
 deactivate
 
