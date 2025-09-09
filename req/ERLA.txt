@@ -11,7 +11,8 @@ glob2
 importlib-metadata
 python-dateutil
 openpyxl
-
+stargazer
+adjustText
 
 
 #cd C:\Users\rg526\venv\py313\Scripts
