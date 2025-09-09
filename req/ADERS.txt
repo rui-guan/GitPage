@@ -20,6 +20,9 @@ moviepy
 ffmpeg
 ffmpeg-python
 azure-cognitiveservices-speech
+tabulate
+py_irt
+prettytable
 
 
 #cd C:\Users\rg526\venv\py311\Scripts\
