@@ -18,6 +18,7 @@ py-irt
 stargazer
 unidecode
 geopandas
+marginaleffects
 
 #cd C:\Users\rg526\venv\py311\Scripts
 #.\activate

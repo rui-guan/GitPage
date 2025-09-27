@@ -13,6 +13,7 @@ python-dateutil
 openpyxl
 stargazer
 adjustText
+marginaleffects
 
 
 #cd C:\Users\rg526\venv\py313\Scripts

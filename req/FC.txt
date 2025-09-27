@@ -21,6 +21,7 @@ adjustText
 wordcloud
 textblob
 nltk
+marginaleffects
 #ptitprince
 
 #cd C:\Users\rg526\venv\py313\Scripts
