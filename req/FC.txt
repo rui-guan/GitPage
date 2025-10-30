@@ -22,6 +22,7 @@ wordcloud
 textblob
 nltk
 marginaleffects
+bs4
 #ptitprince
 
 #cd C:\Users\rg526\venv\py313\Scripts
