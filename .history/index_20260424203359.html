@@ -13,9 +13,7 @@
       --text-size: 15px;
       --text-line-height: 1.6;
       --display-heading-size: 30px;
-      --container-width: 900px;
-      --profile-image-width: 220px;
-      --profile-gap: 40px;
+      --container-width: 720px;
       --nav-bg: #0f2530;
       --nav-bg-2: #133341;
       --nav-text: #e9f1f4;
@@ -90,20 +88,19 @@
       padding: 0 var(--content-side-padding);
     }
 
-    .profile-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) var(--profile-image-width);
-      column-gap: var(--profile-gap);
+    .profile {
+      display: flex;
+      gap: 40px;
       align-items: flex-start;
     }
 
-    .profile-photo img {
-      width: var(--profile-image-width);
+    .profile img {
+      width: 180px;
       border-radius: 4px;
     }
 
-    .main-content {
-      min-width: 0;
+    .profile-text {
+      flex: 1;
     }
 
     .name {
@@ -141,16 +138,12 @@
         padding: 0 18px;
       }
 
-      .profile-layout {
-        grid-template-columns: 1fr;
-        row-gap: 20px;
+      .profile {
+        flex-direction: column;
+        gap: 20px;
       }
 
-      .profile-photo {
-        order: -1;
-      }
-
-      .profile-photo img {
+      .profile img {
         width: 150px;
       }
     }
@@ -177,8 +170,11 @@
 <!-- Content -->
 <div class="container">
 
-  <div class="profile-layout">
-    <div class="main-content">
+  <div class="profile">
+    
+    <img src="./asset/profile.png" alt="Rui Guan">
+
+    <div class="profile-text">
       <div class="name">Rui Guan</div>
 
       <p>I am a Lecturer in Economics at the University of Kent.</p>
@@ -186,10 +182,6 @@
       <p>I hold a PhD in Economics from the Universitat Pompeu Fabra. My research lies in behavioural and experimental economics, with a focus on decision-making.</p>
 
       <p>Email: <a href="mailto:r.guan@kent.ac.uk">r.guan@kent.ac.uk</a>.</p>
-    </div>
-
-    <div class="profile-photo">
-      <img src="./asset/profile.png" alt="Rui Guan">
     </div>
 
   </div>

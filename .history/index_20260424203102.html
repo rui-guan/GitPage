@@ -12,15 +12,7 @@
     :root {
       --text-size: 15px;
       --text-line-height: 1.6;
-      --display-heading-size: 30px;
-      --container-width: 900px;
-      --profile-image-width: 220px;
-      --profile-gap: 40px;
-      --nav-bg: #0f2530;
-      --nav-bg-2: #133341;
-      --nav-text: #e9f1f4;
-      --nav-accent: #71b6c7;
-      --nav-divider: rgba(233, 241, 244, 0.2);
+      --container-width: 720px;
       --nav-padding-y: 10px;
       --nav-padding-x: 40px;
       --content-top-margin: 120px;
@@ -39,9 +31,7 @@
       position: fixed;
       top: 0;
       width: 100%;
-      background: linear-gradient(135deg, var(--nav-bg), var(--nav-bg-2));
-      border-bottom: 1px solid var(--nav-divider);
-      box-shadow: 0 8px 20px rgba(10, 20, 26, 0.12);
+      background-color: #111;
       z-index: 10;
     }
 
@@ -50,8 +40,6 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      min-height: 56px;
-      box-sizing: border-box;
 
       padding: var(--nav-padding-y) var(--nav-padding-x);
       font-size: var(--text-size);
@@ -67,21 +55,13 @@
     }
 
     .links {
-      color: var(--nav-text);
+      color: #eee;
       text-decoration: none;
       font-weight: 500;
-      font-size: 14px;
-      letter-spacing: 0.02em;
-      transition: color 0.18s ease;
     }
 
     .links:hover {
-      color: var(--nav-accent);
-      text-decoration: none;
-    }
-
-    .links.current {
-      color: var(--nav-accent);
+      text-decoration: underline;
     }
     /* Layout */
     .container {
@@ -90,25 +70,24 @@
       padding: 0 var(--content-side-padding);
     }
 
-    .profile-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) var(--profile-image-width);
-      column-gap: var(--profile-gap);
+    .profile {
+      display: flex;
+      gap: 40px;
       align-items: flex-start;
     }
 
-    .profile-photo img {
-      width: var(--profile-image-width);
+    .profile img {
+      width: 180px;
       border-radius: 4px;
     }
 
-    .main-content {
-      min-width: 0;
+    .profile-text {
+      flex: 1;
     }
 
     .name {
       font-family: "Playfair Display", serif;
-      font-size: var(--display-heading-size);
+      font-size: 30px;
       margin-bottom: 10px;
     }
 
@@ -141,16 +120,12 @@
         padding: 0 18px;
       }
 
-      .profile-layout {
-        grid-template-columns: 1fr;
-        row-gap: 20px;
+      .profile {
+        flex-direction: column;
+        gap: 20px;
       }
 
-      .profile-photo {
-        order: -1;
-      }
-
-      .profile-photo img {
+      .profile img {
         width: 150px;
       }
     }
@@ -167,7 +142,7 @@
     </div>
 
     <div class="right-links">
-      <a class="links current" href="index.html">Home</a>
+      <a class="links" href="index.html">Home</a>
       <a class="links" href="research.html">Research</a>
       <a class="links" href="./asset/cv.pdf">CV</a>
     </div>
@@ -177,8 +152,11 @@
 <!-- Content -->
 <div class="container">
 
-  <div class="profile-layout">
-    <div class="main-content">
+  <div class="profile">
+    
+    <img src="./asset/profile.png" alt="Rui Guan">
+
+    <div class="profile-text">
       <div class="name">Rui Guan</div>
 
       <p>I am a Lecturer in Economics at the University of Kent.</p>
@@ -186,10 +164,6 @@
       <p>I hold a PhD in Economics from the Universitat Pompeu Fabra. My research lies in behavioural and experimental economics, with a focus on decision-making.</p>
 
       <p>Email: <a href="mailto:r.guan@kent.ac.uk">r.guan@kent.ac.uk</a>.</p>
-    </div>
-
-    <div class="profile-photo">
-      <img src="./asset/profile.png" alt="Rui Guan">
     </div>
 
   </div>
