@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display&display=swap" rel="stylesheet">
 
   <style>
@@ -13,9 +12,8 @@
       --text-size: 15px;
       --text-line-height: 1.6;
       --display-heading-size: 30px;
+      --section-heading-size: 24px;
       --container-width: 900px;
-      --profile-image-width: 220px;
-      --profile-gap: 40px;
       --nav-bg: #0f2530;
       --nav-bg-2: #133341;
       --nav-text: #e9f1f4;
@@ -48,7 +46,7 @@
     /* Full-width navigation with controlled inner padding. */
     .nav-inner {
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: center;
       min-height: 56px;
       box-sizing: border-box;
@@ -90,28 +88,24 @@
       padding: 0 var(--content-side-padding);
     }
 
-    .profile-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) var(--profile-image-width);
-      column-gap: var(--profile-gap);
-      align-items: flex-start;
-    }
-
-    .profile-photo img {
-      width: var(--profile-image-width);
-      border-radius: 4px;
-    }
-
-    .main-content {
-      min-width: 0;
-    }
-
-    .name {
+    h3 {
       font-family: "Playfair Display", serif;
-      font-size: var(--display-heading-size);
-      margin-bottom: 10px;
+      font-size: var(--section-heading-size);
+      font-weight: 500;
+      margin-top: 30px;
+      margin-bottom: 8px;
     }
 
+    .container h3:first-child {
+      margin-top: 0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin-bottom: 18px;
+    }
+    
     p {
       font-size: var(--text-size);
       line-height: var(--text-line-height);
@@ -125,6 +119,29 @@
 
     a:hover {
       text-decoration: underline;
+    }
+
+    /* Papers */
+    .paper-entry {
+      font-size: var(--text-size);
+      line-height: var(--text-line-height);
+      margin-bottom: 12px;
+    }
+
+    .paper-title {
+      color: inherit;
+      text-decoration: none;
+      font-size: var(--text-size);
+      line-height: var(--text-line-height);
+    }
+
+    .paper-title:hover {
+      text-decoration: underline;
+    }
+
+    .journal {
+      font-style: italic;
+      color: #444;
     }
 
     @media (max-width: 768px) {
@@ -142,23 +159,8 @@
         padding: 0 18px;
       }
 
-      .profile-layout {
-        grid-template-columns: 1fr;
-        row-gap: 20px;
-      }
-
-      .profile-photo {
-        order: -1;
-        display: flex;
-        justify-content: center;
-      }
-
-      .profile-photo img {
-        width: 150px;
-      }
-
-      .name {
-        text-align: center;
+      h3 {
+        font-size: 22px;
       }
     }
   </style>
@@ -166,35 +168,41 @@
 
 <body>
 
-<!-- Navigation -->
 <nav>
   <div class="nav-inner">
     <div class="right-links">
-      <a class="links current" href="index.html">Home</a>
-      <a class="links" href="research.html">Research</a>
+      <a class="links" href="index.html">Home</a>
+      <a class="links current" href="research.html">Research</a>
       <a class="links" href="./asset/cv.pdf">CV</a>
+    </div>
   </div>
 </nav>
 
-<!-- Content -->
 <div class="container">
 
-  <div class="profile-layout">
-    <div class="main-content">
-      <div class="name">Rui Guan</div>
+  <h3>Working Papers</h3>
+  <hr>
 
-      <p>I am a Lecturer in Economics at the University of Kent and hold a PhD from the Universitat Pompeu Fabra.</p>
+  <p class="paper-entry">
+    <a href="./paper/ERCL.pdf" class="paper-title">
+      “Economic Rationality under Cognitive Limitations: The Effect of Sequential Elimination”, Reject and Resubmit at <span class="journal">Quantitative Economics</span>.</a>
+  </p>
 
-      <p>My work in behavioural and experimental economics focuses on helping people make better decisions.</p>
+  <p class="paper-entry">
+    “A Sound Decision? The Impact of Audio Descriptions on Economic Rationality” 
+    (with Fadong Chen).
+  </p>
 
-      <p>Email: <a href="mailto:r.guan@kent.ac.uk">r.guan@kent.ac.uk</a>.</p>
-    </div>
+  <h3>Work in Progress</h3>
+  <hr>
 
-    <div class="profile-photo">
-      <img src="./asset/profile.png" alt="Rui Guan">
-    </div>
+  <p class="paper-entry">
+    “Dynamic Stochastic Consideration”.
+  </p>
 
-  </div>
+  <p class="paper-entry">
+    “Fair Cooperation” (with Andis Sofianos).
+  </p>
 
 </div>
 
