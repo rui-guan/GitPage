@@ -12,9 +12,8 @@
       --text-size: 15px;
       --text-line-height: 1.6;
       --display-heading-size: 30px;
+      --section-heading-size: 24px;
       --container-width: 900px;
-      --rail-width: 180px;
-      --rail-gap: 40px;
       --nav-bg: #0f2530;
       --nav-bg-2: #133341;
       --nav-text: #e9f1f4;
@@ -47,7 +46,7 @@
     /* Full-width navigation with controlled inner padding. */
     .nav-inner {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       min-height: 56px;
       box-sizing: border-box;
@@ -89,38 +88,15 @@
       padding: 0 var(--content-side-padding);
     }
 
-    .page-grid {
-      display: grid;
-      grid-template-columns: var(--rail-width) minmax(0, 1fr);
-      column-gap: var(--rail-gap);
-      align-items: start;
-    }
-
-    .side-rail {
-      padding-top: 8px;
-    }
-
-    .rail-label {
-      font-family: "Playfair Display", serif;
-      font-size: 22px;
-      font-weight: 500;
-      letter-spacing: 0.02em;
-      color: #2b4f5c;
-    }
-
-    .main-content {
-      min-width: 0;
-    }
-
     h3 {
       font-family: "Playfair Display", serif;
-      font-size: var(--display-heading-size);
+      font-size: var(--section-heading-size);
       font-weight: 500;
       margin-top: 30px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
-    .main-content h3:first-child {
+    .container h3:first-child {
       margin-top: 0;
     }
 
@@ -145,54 +121,71 @@
       text-decoration: underline;
     }
 
-    /* Papers */
-    .paper-entry {
-      font-size: var(--text-size);
-      line-height: var(--text-line-height);
-      margin-bottom: 12px;
-    }
+/* ===== Papers ===== */
 
-    .paper-title {
-      color: inherit;
-      text-decoration: none;
-    }
+.paper-entry {
+  margin-bottom: 18px;
+}
 
-    .paper-title:hover {
-      text-decoration: underline;
-    }
+/* Title */
+.paper-title {
+  display: block;
+  font-weight: 400;
+  font-size: var(--text-size);
+  line-height: var(--text-line-height);
+  color: inherit;
+  text-decoration: none;
+}
 
-    .journal {
-      font-style: italic;
-      color: #444;
-    }
+/* only links get hover */
+a.paper-title:hover {
+  text-decoration: underline;
+}
 
-    @media (max-width: 768px) {
-      .nav-inner {
-        padding: 10px 18px;
-      }
+/* Status (e.g. R&R + journal) */
+.paper-status {
+  margin-top: 0.25rem;
+  font-size: 0.92rem;
+  color: #666;
+}
 
-      .right-links {
-        gap: 12px;
-      }
+/* Coauthors */
+.paper-coauthor {
+  margin-top: 0.25rem;
+  font-size: 0.92rem;
+  color: #666;
+}
 
-      .container {
-        margin-top: 100px;
-        padding: 0 18px;
-      }
+/* Journal styling */
+.journal {
+  font-style: italic;
+  color: #777;
+}
 
-      .page-grid {
-        grid-template-columns: 1fr;
-        row-gap: 10px;
-      }
+/* ===== Responsive ===== */
 
-      .side-rail {
-        padding-top: 0;
-      }
+@media (max-width: 768px) {
 
-      .rail-label {
-        font-size: 20px;
-      }
-    }
+  .nav-inner {
+    padding: 10px 18px;
+    justify-content: center;
+  }
+
+  .right-links {
+    gap: 12px;
+  }
+
+  .container {
+    margin-top: 100px;
+    padding: 0 18px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+}
+
+
   </style>
 </head>
 
@@ -200,10 +193,6 @@
 
 <nav>
   <div class="nav-inner">
-    <div class="left-links">
-      <a class="links" href="index.html">Rui Guan</a>
-    </div>
-
     <div class="right-links">
       <a class="links" href="index.html">Home</a>
       <a class="links current" href="research.html">Research</a>
@@ -214,41 +203,53 @@
 
 <div class="container">
 
-  <div class="page-grid">
-    <div class="side-rail">
-      <div class="rail-label">Research</div>
-    </div>
-
-    <div class="main-content">
-
   <h3>Working Papers</h3>
   <hr>
 
-  <p class="paper-entry">
-    <a href="./paper/ERCL.pdf" class="paper-title">
-      “Economic Rationality under Cognitive Limitations: The Effect of Sequential Elimination”, Reject and Resubmit at <span class="journal">Quantitative Economics</span>.</a>
-  </p>
+  <div class="paper-entry">
 
-  <p class="paper-entry">
-    “A Sound Decision? The Impact of Audio Descriptions on Economic Rationality” 
-    (with Fadong Chen).
-  </p>
+    <a href="./paper/ERCL.pdf" class="paper-title">
+      Economic Rationality under Cognitive Limitations:
+      The Effect of Sequential Elimination
+    </a>
+
+<div class="paper-status">
+  Revise and Resubmit at <span class="journal">Quantitative Economics</span>
+</div>
+
+  </div>
+
+  <div class="paper-entry">
+
+    <div class="paper-title">
+      A Sound Decision? The Impact of Audio Presentations on Economic Rationality  (with Fadong Chen)
+    </div>
+
+
+  </div>
 
   <h3>Work in Progress</h3>
   <hr>
 
-  <p class="paper-entry">
-    “Dynamic Stochastic Consideration”.
-  </p>
+    <div class="paper-entry">
 
-  <p class="paper-entry">
-    “Fair Cooperation” (with Andis Sofianos).
-  </p>
-
+    <div class="paper-title">
+      Fair Cooperation  (with Andis Sofianos)
     </div>
+
+
   </div>
 
-</div>
 
+  <div class="paper-entry">
+
+    <div class="paper-title">
+      Dynamic Stochastic Consideration
+    </div>
+
+  </div>
+
+
+</div>
 </body>
 </html>
